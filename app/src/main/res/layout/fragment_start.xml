@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="275dp"
+        android:layout_height="275dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_global_network" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:text="Welcome to Mega Trust Jobs"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/startBtn"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:shadowColor="@android:color/darker_gray"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="15"
+        android:textAllCaps="false"
+        android:background="@color/teal_200"
+        android:textColor="@color/white"
+        android:text="start"
+        android:textSize="26sp" />
+
+
+</LinearLayout>

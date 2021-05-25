@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.remotejobs.ui.splash.StartFragment"
+        android:label="start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_homeFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.remotejobs.ui.home.HomeFragment"
+        android:label="home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_homeDetailsFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/homeDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeDetailsFragment"
+        android:name="com.example.remotejobs.ui.details.HomeDetailsFragment"
+        android:label="details"
+        tools:layout="@layout/fragment_home_details" >
+        <argument
+            android:name="JOBS_ITEM"
+            app:argType="com.example.remotejobs.data.model.ResponseItem" />
+        <action
+            android:id="@+id/action_homeDetailsFragment_to_webViewFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/webViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.example.remotejobs.ui.details.WebViewFragment"
+        android:label="WebView" >
+        <argument
+            android:name="webViewUrl"
+            app:argType="string" />
+
+    </fragment>
+</navigation>
